@@ -6,7 +6,11 @@
 (defpackage #:cl-aead
   (:use #:cl)
   (:export
-   #:with-aead-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-aead-timing
    #:aead-batch-process
    #:aead-health-check;; Constants
    #:+chacha20-block-size+
@@ -48,6 +52,10 @@
 (defpackage #:cl-aead-test
   (:use #:cl)
   (:export
-   #:with-aead-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-aead-timing
    #:aead-batch-process
    #:aead-health-check#:run-all-tests))
