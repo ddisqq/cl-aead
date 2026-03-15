@@ -6,7 +6,9 @@
 (defpackage #:cl-aead
   (:use #:cl)
   (:export
-   ;; Constants
+   #:with-aead-timing
+   #:aead-batch-process
+   #:aead-health-check;; Constants
    #:+chacha20-block-size+
    #:+chacha20-key-size+
    #:+chacha20-nonce-size+
@@ -45,4 +47,7 @@
 
 (defpackage #:cl-aead-test
   (:use #:cl)
-  (:export #:run-all-tests))
+  (:export
+   #:with-aead-timing
+   #:aead-batch-process
+   #:aead-health-check#:run-all-tests))

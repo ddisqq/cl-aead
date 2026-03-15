@@ -5,19 +5,16 @@
 
 (asdf:defsystem #:cl-aead
   :description "Pure Common Lisp AEAD implementations: ChaCha20-Poly1305, XChaCha20-Poly1305, AES-256-GCM"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :version "0.1.0"
   :serial t
   :components ((:file "package")
                (:module "src"
-                :serial t
-                :components ((:file "util")
-                             (:file "aes")
-                             (:file "gcm")
-                             (:file "chacha20")
-                             (:file "poly1305")
-                             (:file "aead")))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-aead" :depends-on ("package" "conditions" "types")))))))
 
 (asdf:defsystem #:cl-aead/test
   :description "Tests for cl-aead"
