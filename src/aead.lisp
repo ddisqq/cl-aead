@@ -1,5 +1,5 @@
 ;;;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
-;;;; SPDX-License-Identifier: BSD-3-Clause
+;;;; SPDX-License-Identifier: Apache-2.0
 ;;;;
 ;;;; aead.lisp - High-level AEAD API (ChaCha20-Poly1305, XChaCha20-Poly1305, AES-256-GCM)
 ;;;;
